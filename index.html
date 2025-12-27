@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Music</title>
+
+<style>
+@font-face {
+  font-family: 'sahel';
+  src: url('fonts/Sahel-Black.ttf') format('truetype');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'sahel', sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color: #fff;
+  padding: 40px;
+}
+
+/* تیتر اصلی */
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  text-shadow: 0 0 20px rgba(255,0,0,0.6);
+}
+
+/* بخش خواننده */
+.artist-section {
+  margin-bottom: 70px;
+}
+
+/* اسم خواننده */
+.artist-title {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #ff4d4d;
+  border-left: 4px solid #ff0000;
+  padding-left: 15px;
+  text-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+/* آلبوم‌ها */
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* کارت آلبوم */
+.album-card {
+  background: linear-gradient(145deg, #1a1a1a, #000);
+  border-radius: 18px;
+  padding: 15px;
+  width: 100%;
+  max-width: 220px;
+  transition: all 0.35s ease;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+}
+
+.album-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255,0,0,0.6);
+}
+
+.album-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* عنوان آلبوم */
+.album-title {
+  font-size: 15px;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+/* دکمه‌ها */
+.album-btn,
+.download-btn {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.album-btn {
+  background: linear-gradient(90deg, #ff0000, #b30000);
+  color: #fff;
+}
+
+.album-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.download-btn {
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  font-size: 14px;
+}
+
+.download-btn:hover {
+  background: #ff0000;
+  color: #000;
+}
+
+/* Focus برای کیبورد */
+.album-btn:focus,
+.download-btn:focus {
+  outline: 2px solid #ff0000;
+  outline-offset: 3px;
+}
+
+/* موبایل */
+@media (max-width: 600px) {
+  body {
+    padding: 25px;
+  }
+
+  .album-container {
+    justify-content: center;
+  }
+
+  .artist-title {
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎵 My Music</h1>
+
+<!-- ================= Nirvana ================= -->
+<section class="artist-section">
+  <div class="artist-title">NIRVANA</div>
+
+  <div class="album-container">
+    <article class="album-card">
+      <img loading="lazy"
+           src="https://upload.wikimedia.org/wikipedia/en/a/a1/Nirvana-Bleach.jpg"
+           class="album-img"
+           alt="Nirvana - Bleach Album Cover">
+
+      <div class="album-title">Bleach (1989)</div>
+      <a href="nirvanaalbum.html" class="album-btn">🎧 Open Album</a>
+      <a href="Bleach.zip" download class="download-btn">⬇ Download</a>
+    </article>
+  </div>
+</section>
+
+<!-- ================= Slipknot ================= -->
+<section class="artist-section">
+  <div class="artist-title">SLIPKNOT</div>
+
+  <div class="album-container">
+    <article class="album-card">
+      <img loading="lazy"
+           src="https://cdn-images.dzcdn.net/images/cover/233c70bda781ca0e8403749398b5a026/1900x1900-000000-80-0-0.jpg"
+           class="album-img"
+           alt="Slipknot - Wait and Bleed">
+
+      <div class="album-title">Wait and Bleed</div>
+      <a href="song1.html" class="album-btn">🎧 Open Track</a>
+      <a href="Wait_And_Bleed.mp3" download class="download-btn">⬇ Download</a>
+    </article>
+  </div>
+</section>
+
+<!-- ================= Korn ================= -->
+<section class="artist-section">
+  <div class="artist-title">KORN</div>
+
+  <div class="album-container">
+    <article class="album-card">
+      <img loading="lazy"
+           src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg"
+           class="album-img"
+           alt="Korn - Untitled Album">
+
+      <div class="album-title">Untitled (2007)</div>
+      <a href="korn.html" class="album-btn">🎧 Open Album</a>
+      <a href="Korn-Untitled.zip" download class="download-btn">⬇ Download</a>
+    </article>
+  </div>
+</section>
+
+</body>
+</html>
