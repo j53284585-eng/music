@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>NIRVANA — In Utero</title>
+
+  <style>
+    @font-face {
+      font-family: 'sahel';
+      src: url('fonts/Sahel-Black.ttf') format('truetype');
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'sahel', sans-serif;
+      background: radial-gradient(circle at top, #1a0000, #000);
+      color: #fff;
+      min-height: 100vh;
+      transition: background 0.6s ease;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 56px;
+      color: #ff2b2b;
+      text-shadow: 0 0 30px rgba(255,0,0,0.8);
+    }
+
+    header p {
+      color: #aaa;
+      margin-top: 12px;
+      letter-spacing: 3px;
+    }
+
+    .songs-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .song-card {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(14px);
+      border-radius: 22px;
+      padding: 18px;
+      transition: 0.4s ease;
+    }
+
+    .song-card:hover {
+      transform: translateY(-12px) scale(1.05);
+    }
+
+    .song-card.playing {
+      box-shadow: 0 0 35px rgba(255,0,0,0.9);
+    }
+
+    .cover-wrapper {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .song-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .song-card.playing .song-cover {
+      transform: scale(1.12) rotate(-1deg);
+    }
+
+    .song-title {
+      font-size: 15px;
+      color: #ff6b6b;
+      margin-bottom: 10px;
+    }
+
+    audio { width: 100%; }
+
+    .download-btn {
+      display: block;
+      margin-top: 12px;
+      padding: 11px;
+      text-align: center;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #ff0000, #900);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>NIRVANA</h1>
+  <p>IN UTERO • 1993</p>
+</header>
+
+<div class="songs-container">
+
+<!-- 01 -->
+<div class="song-card" data-bg="radial-gradient(circle,#330000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">01 — Serve The Servants</div>
+  <audio controls src="Serve The Servants(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Serve The Servants(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 02 -->
+<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">02 — Scentless Apprentice</div>
+  <audio controls src="Scentless Apprentice(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Scentless Apprentice(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 03 -->
+<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">03 — Heart-Shaped Box</div>
+  <audio controls src="Heart-Shaped Box(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Heart-Shaped Box(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 04 -->
+<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">04 — Rape Me</div>
+  <audio controls src="Rape Me(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Rape Me(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 05 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">05 — Frances Farmer Will Have Her Revenge On Seattle</div>
+  <audio controls src="Frances Farmer Will Have Her Revenge On Seattle(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Frances Farmer Will Have Her Revenge On Seattle(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 06 -->
+<div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">06 — Dumb</div>
+  <audio controls src="Dumb(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Dumb(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 07 -->
+<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">07 — Very Ape</div>
+  <audio controls src="Very Ape(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Very Ape(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 08 -->
+<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">08 — Milk It</div>
+  <audio controls src="Milk It(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Milk It(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 09 -->
+<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">09 — Pennyroyal Tea</div>
+  <audio controls src="Pennyroyal Tea(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Pennyroyal Tea(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 10 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">10 — Radio Friendly Unit Shifter</div>
+  <audio controls src="Radio Friendly Unit Shifter(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Radio Friendly Unit Shifter(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 11 -->
+<div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg">
+  </div>
+  <div class="song-title">11 — Tourette’s</div>
+  <audio controls src="Tourette_s(MP3_320K).mp3"></audio>
+  <a class="download-btn" href="Tourette_s(MP3_320K).mp3" download>⬇ Download</a>
+</div>
+
+</div>
+
+<script>
+  const audios = document.querySelectorAll('audio');
+  const cards = document.querySelectorAll('.song-card');
+
+  audios.forEach(audio => {
+    audio.addEventListener('play', () => {
+      audios.forEach(a => {
+        if (a !== audio) {
+          a.pause();
+          a.parentElement.classList.remove('playing');
+        }
+      });
+      const card = audio.parentElement;
+      cards.forEach(c => c.classList.remove('playing'));
+      card.classList.add('playing');
+      document.body.style.background = card.dataset-bg;
+    });
+  });
+</script>
+
+</body>
+</html>
