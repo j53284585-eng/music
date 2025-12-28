@@ -1,255 +1,267 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-<meta charset="UTF-8">
-<title>KORN — Untitled</title>
+  <meta charset="UTF-8">
+  <title>KORN — Untitled</title>
 
-<style>
-@font-face {
-  font-family: 'sahel';
-  src: url('fonts/Sahel-Black.ttf') format('truetype');
-}
-* { box-sizing: border-box; }
+  <style>
+    @font-face {
+      font-family: 'sahel';
+      src: url('fonts/Sahel-Black.ttf') format('truetype');
+    }
 
-body {
-  margin: 0;
-  font-family: 'sahel', sans-serif;
-  background: radial-gradient(circle at top, #1a0000, #000);
-  color: #fff;
-  min-height: 100vh;
-  transition: background 0.6s ease;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-header {
-  padding: 60px 20px;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      font-family: 'sahel', sans-serif;
+      background: radial-gradient(circle at top, #1a0000, #000);
+      color: #fff;
+      min-height: 100vh;
+      transition: background 0.6s ease;
+    }
 
-header h1 {
-  font-size: 56px;
-  color: #ff2b2b;
-  text-shadow: 0 0 30px rgba(255,0,0,0.8);
-}
+    header {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-header p {
-  color: #aaa;
-  margin-top: 12px;
-  letter-spacing: 3px;
-}
+    header h1 {
+      font-size: 56px;
+      color: #ff2b2b;
+      text-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+    }
 
-.songs-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
-  padding: 40px;
-  max-width: 1400px;
-  margin: auto;
-}
+    header p {
+      color: #aaa;
+      margin-top: 12px;
+      letter-spacing: 3px;
+    }
 
-.song-card {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(14px);
-  border-radius: 22px;
-  padding: 18px;
-  transition: 0.4s ease;
-}
+    .songs-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
 
-.song-card:hover {
-  transform: translateY(-12px) scale(1.05);
-}
+    .song-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(14px);
+      border-radius: 22px;
+      padding: 18px;
+      transition: 0.4s ease;
+    }
 
-.song-card.playing {
-  box-shadow: 0 0 35px rgba(255,0,0,0.9);
-}
+    .song-card:hover {
+      transform: translateY(-12px) scale(1.05);
+    }
 
-.cover-wrapper {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 14px;
-}
+    .song-card.playing {
+      box-shadow: 0 0 35px rgba(255, 0, 0, 0.9);
+    }
 
-.song-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
+    .cover-wrapper {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
 
-.song-card.playing .song-cover {
-  transform: scale(1.12) rotate(-1deg);
-}
+    .song-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
 
-.song-title {
-  font-size: 15px;
-  color: #ff6b6b;
-  margin-bottom: 10px;
-}
+    .song-card.playing .song-cover {
+      transform: scale(1.12) rotate(-1deg);
+    }
 
-audio {
-  width: 100%;
-}
+    .song-title {
+      font-size: 15px;
+      color: #ff6b6b;
+      margin-bottom: 10px;
+    }
 
-.download-btn {
-  display: block;
-  margin-top: 12px;
-  padding: 11px;
-  text-align: center;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #ff0000, #900);
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
+    audio {
+      width: 100%;
+    }
 
-.download-btn:hover {
-  background: #fff;
-  color: #000;
-  transform: scale(1.05);
-}
-</style>
+    .download-btn {
+      display: block;
+      margin-top: 12px;
+      padding: 11px;
+      text-align: center;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #ff0000, #900);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>KORN</h1>
-  <p>UNTITLED • 2007</p>
-</header>
+  <header>
+    <h1>KORN</h1>
+    <p>UNTITLED • 2007</p>
+  </header>
 
-<div class="songs-container">
+  <div class="songs-container">
 
-<!-- 01 -->
-<div class="song-card" data-bg="radial-gradient(circle,#330000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+    <!-- 01 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#330000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">01 — Intro</div>
+      <audio controls src="Korn-Intro-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Intro-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 02 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">02 — Starting Over</div>
+      <audio controls src="Korn-Starting-Over-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Starting-Over-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 03 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">03 — Bitch We Got a Problem</div>
+      <audio controls src="Korn-Bitch-We-Got-a-Problem-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Bitch-We-Got-a-Problem-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 04 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">04 — Evolution</div>
+      <audio controls src="Korn-Evolution-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Evolution-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 05 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">05 — Hold On</div>
+      <audio controls src="Korn-Hold-On-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Hold-On-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 06 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">06 — Kiss</div>
+      <audio controls src="Korn-Kiss-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Kiss-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 07 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">07 — Do What They Say</div>
+      <audio controls src="Korn-Do-What-They-Say-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Do-What-They-Say-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 08 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">08 — Innocent Bystander</div>
+      <audio controls src="Korn-Innocent-Bystander-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Innocent-Bystander-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 09 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">09 — Killing</div>
+      <audio controls src="Korn-Killing-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Killing-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 10 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">10 — Love and Luxury</div>
+      <audio controls src="Korn-Love-and-Luxury-320.mp3"></audio>
+      <a class="download-btn" href="Korn-Love-and-Luxury-320.mp3" download>⬇ Download</a>
+    </div>
+
+    <!-- 11 -->
+    <div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+      <div class="cover-wrapper">
+        <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
+      </div>
+      <div class="song-title">11 — I Will Protect You</div>
+      <audio controls src="Korn-I-Will-Protect-You-320.mp3"></audio>
+      <a class="download-btn" href="Korn-I-Will-Protect-You-320.mp3" download>⬇ Download</a>
+    </div>
+
   </div>
-  <div class="song-title">01 — Intro</div>
-  <audio controls src="Korn-Intro-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Intro-320.mp3" download>⬇ Download</a>
-</div>
 
-<!-- 02 -->
-<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">02 — Starting Over</div>
-  <audio controls src="Korn-Starting-Over-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Starting-Over-320.mp3" download>⬇ Download</a>
-</div>
+  <script>
+    const audios = document.querySelectorAll('audio');
+    const cards = document.querySelectorAll('.song-card');
 
-<!-- 03 -->
-<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">03 — Bitch We Got a Problem</div>
-  <audio controls src="Korn-Bitch-We-Got-a-Problem-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Bitch-We-Got-a-Problem-320.mp3" download>⬇ Download</a>
-</div>
+    audios.forEach(audio => {
+      audio.addEventListener('play', () => {
+        audios.forEach(a => {
+          if (a !== audio) {
+            a.pause();
+            a.parentElement.classList.remove('playing');
+          }
+        });
 
-<!-- 04 -->
-<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">04 — Evolution</div>
-  <audio controls src="Korn-Evolution-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Evolution-320.mp3" download>⬇ Download</a>
-</div>
-
-<!-- 05 -->
-<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">05 — Hold On</div>
-  <audio controls src="Korn-Hold-On-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Hold-On-320.mp3" download>⬇ Download</a>
-</div>
-
-<!-- 06 -->
-<div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">06 — Kiss</div>
-  <audio controls src="Korn-Kiss-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Kiss-320.mp3" download>⬇ Download</a>
-</div>
-
-<!-- 07 -->
-<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">07 — Do What They Say</div>
-  <audio controls src="Korn-Do-What-They-Say-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Do-What-They-Say-320.mp3" download>⬇ Download</a>
-</div>
-
-<!-- 08 -->
-<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">08 — Innocent Bystander</div>
-  <audio controls src="Korn-Innocent-Bystander-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Innocent-Bystander-320.mp3" download>⬇ Download</a>
-</div>
-
-<!-- 09 -->
-<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">09 — Killing</div>
-  <audio controls src="Korn-Killing-320.mp3"></audio>
-  <a class="download-btn" href="Korn-Killing-320.mp3" download>⬇ Download</a>
-</div>
-
-<!-- 10 (Archive.org) -->
-<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
-  <div class="cover-wrapper">
-    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg">
-  </div>
-  <div class="song-title">10 — Love and Luxury</div>
-
-  <audio controls
-    src="https://archive.org/download/korn-love-and-luxury-320/Korn-Love-and-Luxury-320.mp3">
-  </audio>
-
-  <a class="download-btn"
-    href="https://archive.org/download/korn-love-and-luxury-320/Korn-Love-and-Luxury-320.mp3"
-    target="_blank">
-    ⬇ Download
-  </a>
-</div>
-
-</div>
-
-<script>
-const audios = document.querySelectorAll('audio');
-const cards = document.querySelectorAll('.song-card');
-
-audios.forEach(audio => {
-  audio.addEventListener('play', () => {
-    audios.forEach(a => {
-      if (a !== audio) {
-        a.pause();
-        a.parentElement.classList.remove('playing');
-      }
+        const card = audio.parentElement;
+        cards.forEach(c => c.classList.remove('playing'));
+        card.classList.add('playing');
+        document.body.style.background = card.dataset-bg;
+      });
     });
-    const card = audio.parentElement;
-    cards.forEach(c => c.classList.remove('playing'));
-    card.classList.add('playing');
-    document.body.style.background = card.dataset-bg;
-  });
-});
-</script>
+  </script>
 
 </body>
 </html>
