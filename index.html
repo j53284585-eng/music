@@ -13,9 +13,7 @@
   font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -25,7 +23,6 @@ body {
   padding: 40px;
 }
 
-/* تیتر اصلی */
 h1 {
   text-align: center;
   font-size: 48px;
@@ -33,12 +30,10 @@ h1 {
   text-shadow: 0 0 20px rgba(255,0,0,0.6);
 }
 
-/* بخش خواننده */
 .artist-section {
   margin-bottom: 70px;
 }
 
-/* اسم خواننده */
 .artist-title {
   font-size: 34px;
   margin-bottom: 25px;
@@ -53,6 +48,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: flex-start;
 }
 
 /* کارت آلبوم */
@@ -60,8 +56,7 @@ h1 {
   background: linear-gradient(145deg, #1a1a1a, #000);
   border-radius: 18px;
   padding: 15px;
-  width: 100%;
-  max-width: 220px;
+  width: 220px;
   transition: all 0.35s ease;
   box-shadow: 0 15px 30px rgba(0,0,0,0.8);
 }
@@ -77,14 +72,12 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* عنوان آلبوم */
 .album-title {
   font-size: 15px;
   color: #ff6b6b;
   margin-bottom: 10px;
 }
 
-/* دکمه‌ها */
 .album-btn,
 .download-btn {
   display: block;
@@ -118,18 +111,8 @@ h1 {
   color: #000;
 }
 
-/* Focus برای کیبورد */
-.album-btn:focus,
-.download-btn:focus {
-  outline: 2px solid #ff0000;
-  outline-offset: 3px;
-}
-
-/* موبایل */
 @media (max-width: 600px) {
-  body {
-    padding: 25px;
-  }
+  body { padding: 25px; }
 
   .album-container {
     justify-content: center;
@@ -147,23 +130,36 @@ h1 {
 
 <body>
 
-<h1>🎵 My Music</h1>
+<h1>albums</h1>
 
 <!-- ================= Nirvana ================= -->
 <section class="artist-section">
   <div class="artist-title">NIRVANA</div>
 
   <div class="album-container">
+
+    <!-- Bleach -->
     <article class="album-card">
       <img loading="lazy"
            src="https://upload.wikimedia.org/wikipedia/en/a/a1/Nirvana-Bleach.jpg"
            class="album-img"
            alt="Nirvana - Bleach Album Cover">
-
       <div class="album-title">Bleach (1989)</div>
       <a href="nirvanaalbum.html" class="album-btn">🎧 Open Album</a>
       <a href="Bleach.zip" download class="download-btn">⬇ Download</a>
     </article>
+
+    <!-- In Utero -->
+    <article class="album-card">
+      <img loading="lazy"
+           src="https://m.media-amazon.com/images/I/710XKXHIeNL.jpg"
+           class="album-img"
+           alt="Nirvana - In Utero Album Cover">
+      <div class="album-title">In Utero (1993)</div>
+      <a href="nirvana.html" class="album-btn">🎧 Open Album</a>
+      <a href="In_Utero.zip" download class="download-btn">⬇ Download</a>
+    </article>
+
   </div>
 </section>
 
@@ -177,7 +173,6 @@ h1 {
            src="https://cdn-images.dzcdn.net/images/cover/233c70bda781ca0e8403749398b5a026/1900x1900-000000-80-0-0.jpg"
            class="album-img"
            alt="Slipknot - Wait and Bleed">
-
       <div class="album-title">Wait and Bleed</div>
       <a href="song1.html" class="album-btn">🎧 Open Track</a>
       <a href="Wait_And_Bleed.mp3" download class="download-btn">⬇ Download</a>
@@ -195,7 +190,6 @@ h1 {
            src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg"
            class="album-img"
            alt="Korn - Untitled Album">
-
       <div class="album-title">Untitled (2007)</div>
       <a href="korn.html" class="album-btn">🎧 Open Album</a>
       <a href="Korn-Untitled.zip" download class="download-btn">⬇ Download</a>
