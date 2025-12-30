@@ -142,8 +142,10 @@ h1 {
   <input type="text" id="searchInput" placeholder="Search artist or album...">
 </div>
 
+<!-- ================= Nirvana ================= -->
 <section class="artist-section">
   <div class="artist-title">NIRVANA</div>
+
   <div class="album-container">
     <article class="album-card" data-search="nirvana bleach 1989">
       <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Nirvana-Bleach.jpg" class="album-img">
@@ -161,8 +163,10 @@ h1 {
   </div>
 </section>
 
+<!-- ================= Slipknot ================= -->
 <section class="artist-section">
   <div class="artist-title">SLIPKNOT</div>
+
   <div class="album-container">
     <article class="album-card" data-search="slipknot wait and bleed">
       <img src="https://cdn-images.dzcdn.net/images/cover/233c70bda781ca0e8403749398b5a026/1900x1900-000000-80-0-0.jpg" class="album-img">
@@ -173,8 +177,10 @@ h1 {
   </div>
 </section>
 
+<!-- ================= Korn ================= -->
 <section class="artist-section">
   <div class="artist-title">KORN</div>
+
   <div class="album-container">
     <article class="album-card" data-search="korn untitled 2007">
       <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/Korn_-_Untitled.jpg" class="album-img">
@@ -190,14 +196,21 @@ const searchInput = document.getElementById('searchInput');
 const albumCards = document.querySelectorAll('.album-card');
 
 searchInput.addEventListener('input', () => {
-  const value = searchInput.value.toLowerCase();
+  const value = searchInput.value.toLowerCase().trim();
 
   albumCards.forEach(card => {
-    const text = card.dataset.search;
-    card.style.display = text.includes(value) ? 'block' : 'none';
+    const text = card.dataset.search.toLowerCase();
+    if (text.includes(value)) {
+      card.style.visibility = 'visible';
+      card.style.position = 'relative';
+    } else {
+      card.style.visibility = 'hidden';
+      card.style.position = 'absolute';
+    }
   });
 });
 </script>
 
 </body>
 </html>
+
