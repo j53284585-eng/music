@@ -193,24 +193,64 @@ h1 {
 
 <script>
 const searchInput = document.getElementById('searchInput');
-const albumCards = document.querySelectorAll('.album-card');
+const sections = document.querySelectorAll('.artist-section');
 
+function levenshtein(a, b) {
+  const al = a.length, bl = b.length;
+  if (!al) return bl;
+  if (!bl) return al;
+
+  const matrix = Array.from({ length: bl + 1 }, (_, i) => [i]);
+  for (let j = 0; j <= al; j++) matrix[0][j] = j;
+
+  for (let i = 1; i <= bl; i++) {
+    for (let j = 1; j <= al; j++) {
+      matrix[i][j] =
+        b[i - 1] === a[j - 1]
+          ? matrix[i - 1][j - 1]
+          : Math.min(
+              matrix[i - 1][j - 1] + 1,
+              matrix[i][j - 1] + 1,
+              matrix[i - 1][j] + 1
+            );
+    }
+  }
+  return matrix[bl][al];
+}
+
+function similarity(a, b) {
+  const distance = levenshtein(a, b);
+  return 1 - distance / Math.max(a.length, b.length);
+}
+
+let timer;
 searchInput.addEventListener('input', () => {
+  clearTimeout(timer);
+  timer = setTimeout(runSearch, 250);
+});
+
+function runSearch() {
   const value = searchInput.value.toLowerCase().trim();
 
-  albumCards.forEach(card => {
-    const text = card.dataset.search.toLowerCase();
-    if (text.includes(value)) {
-      card.style.visibility = 'visible';
-      card.style.position = 'relative';
-    } else {
-      card.style.visibility = 'hidden';
-      card.style.position = 'absolute';
-    }
+  sections.forEach(section => {
+    const cards = section.querySelectorAll('.album-card');
+    let sectionHasResult = false;
+
+    cards.forEach(card => {
+      const text = card.dataset.search.toLowerCase();
+      const match =
+        !value ||
+        text.includes(value) ||
+        similarity(value, text) > 0.4;
+
+      card.style.display = match ? '' : 'none';
+      if (match) sectionHasResult = true;
+    });
+
+    section.style.display = sectionHasResult ? '' : 'none';
   });
-});
+}
 </script>
 
-</body>
-</html>
+
 
