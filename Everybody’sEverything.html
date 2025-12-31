@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>LIL PEEP — Everybody's Everything</title>
+
+<style>
+@font-face {
+  font-family: 'sahel';
+  src: url('fonts/Sahel-Black.ttf') format('truetype');
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'sahel', sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color: #fff;
+  min-height: 100vh;
+  transition: background 0.6s ease;
+}
+
+header {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 56px;
+  color: #ff2b2b;
+  text-shadow: 0 0 30px rgba(255,0,0,0.8);
+}
+
+header p {
+  color: #aaa;
+  margin-top: 12px;
+  letter-spacing: 3px;
+}
+
+.songs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.song-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 18px;
+  transition: 0.4s ease;
+}
+
+.song-card:hover {
+  transform: translateY(-12px) scale(1.05);
+}
+
+.song-card.playing {
+  box-shadow: 0 0 35px rgba(255,0,0,0.9);
+}
+
+.cover-wrapper {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.song-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.song-card.playing .song-cover {
+  transform: scale(1.12) rotate(-1deg);
+}
+
+.song-title {
+  font-size: 14px;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+audio {
+  width: 100%;
+}
+
+.download-btn {
+  display: block;
+  margin-top: 12px;
+  padding: 11px;
+  text-align: center;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff0000, #900);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>LIL PEEP</h1>
+  <p>EVERYBODY'S EVERYTHING • 2019</p>
+</header>
+
+<div class="songs-container">
+
+<!-- 01 -->
+<div class="song-card" data-bg="radial-gradient(circle,#330000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png">
+  </div>
+  <div class="song-title">01 — I've Been Waiting</div>
+  <audio controls src="Lil_Peep_I_ve_Been_Waiting_Original_Version_Ft_iLoveMakonnen_320.mp3"></audio>
+  <a class="download-btn" href="Lil_Peep_I_ve_Been_Waiting_Original_Version_Ft_iLoveMakonnen_320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 02 -->
+<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">02 — AQUAFINA</div>
+  <audio controls src="Lil-Peep-AQUAFINA-(Ft-Rich-The-Kid)-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-AQUAFINA-(Ft-Rich-The-Kid)-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 03 -->
+<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">03 — Belgium</div>
+  <audio controls src="Lil-Peep-Belgium-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Belgium-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 04 -->
+<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">04 — Fangirl</div>
+  <audio controls src="Lil-Peep-Fangirl-(Ft-Gab3)-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Fangirl-(Ft-Gab3)-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 05 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">05 — Ghost Boy</div>
+  <audio controls src="Lil-Peep-ghost-boy-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-ghost-boy-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 06 -->
+<div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">06 — Keep My Coo</div>
+  <audio controls src="Lil-Peep-Keep-My-Coo-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Keep-My-Coo-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 07 -->
+<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">07 — LA to London</div>
+  <audio controls src="Lil-Peep-LA-to-London-(Ft-Gab3)-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-LA-to-London-(Ft-Gab3)-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 08 -->
+<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">08 — Liar</div>
+  <audio controls src="Lil-Peep-Liar-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Liar-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 09 -->
+<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">09 — Cobain</div>
+  <audio controls src="Lil-Peep-Lil-Tracy-cobain-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Lil-Tracy-cobain-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 10 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">10 — RATCHETS</div>
+  <audio controls src="Lil-Peep-Lil-Tracy-Diplo-RATCHETS-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Lil-Tracy-Diplo-RATCHETS-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 11 -->
+<div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">11 — Walk Away As The Door Slams (Acoustic)</div>
+  <audio controls src="Lil-Peep-Lil-Tracy-walk-away-as-the-door-slams-(acoustic)-32.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Lil-Tracy-walk-away-as-the-door-slams-(acoustic)-32.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 12 -->
+<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">12 — White Tee</div>
+  <audio controls src="Lil-Peep-Lil-Tracy-white-tee-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Lil-Tracy-white-tee-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 13 -->
+<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">13 — Witchblades</div>
+  <audio controls src="Lil-Peep-Lil-Tracy-witchblades-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Lil-Tracy-witchblades-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 14 -->
+<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">14 — Live Forever</div>
+  <audio controls src="Lil-Peep-Live-Forever-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Live-Forever-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 15 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">15 — Moving On</div>
+  <audio controls src="Lil-Peep-Moving-On-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Moving-On-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 16 -->
+<div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">16 — Princess</div>
+  <audio controls src="Lil-Peep-PRINCESS-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-PRINCESS-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 17 -->
+<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">17 — Rockstarz</div>
+  <audio controls src="Lil-Peep-Rockstarz-(Ft-Gab3)-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Rockstarz-(Ft-Gab3)-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 18 -->
+<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">18 — Text Me</div>
+  <audio controls src="Lil-Peep-Text-Me-(Ft-Era)-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-Text-Me-(Ft-Era)-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 19 -->
+<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+  <div class="cover-wrapper"><img class="song-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png"></div>
+  <div class="song-title">19 — When I Lie</div>
+  <audio controls src="Lil-Peep-When-I-Lie-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-When-I-Lie-320.mp3" download>⬇ Download</a>
+</div>
+
+</div>
+
+<script>
+const audios = document.querySelectorAll('audio');
+const cards = document.querySelectorAll('.song-card');
+
+audios.forEach(audio => {
+  audio.addEventListener('play', () => {
+    audios.forEach(a => {
+      if (a !== audio) {
+        a.pause();
+        a.parentElement.classList.remove('playing');
+      }
+    });
+    const card = audio.parentElement;
+    cards.forEach(c => c.classList.remove('playing'));
+    card.classList.add('playing');
+    document.body.style.background = card.dataset.bg;
+  });
+});
+</script>
+
+</body>
+</html>
