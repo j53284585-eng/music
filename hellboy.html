@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>LIL PEEP — Hellboy</title>
+
+  <style>
+    @font-face {
+      font-family: 'sahel';
+      src: url('fonts/Sahel-Black.ttf') format('truetype');
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'sahel', sans-serif;
+      background: radial-gradient(circle at top, #1a0000, #000);
+      color: #fff;
+      min-height: 100vh;
+      transition: background 0.6s ease;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 56px;
+      color: #ff2b2b;
+      text-shadow: 0 0 30px rgba(255,0,0,0.8);
+    }
+
+    header p {
+      color: #aaa;
+      margin-top: 12px;
+      letter-spacing: 3px;
+    }
+
+    .songs-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .song-card {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(14px);
+      border-radius: 22px;
+      padding: 18px;
+      transition: 0.4s ease;
+    }
+
+    .song-card:hover {
+      transform: translateY(-12px) scale(1.05);
+    }
+
+    .song-card.playing {
+      box-shadow: 0 0 35px rgba(255,0,0,0.9);
+    }
+
+    .cover-wrapper {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .song-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .song-card.playing .song-cover {
+      transform: scale(1.12) rotate(-1deg);
+    }
+
+    .song-title {
+      font-size: 15px;
+      color: #ff6b6b;
+      margin-bottom: 10px;
+    }
+
+    audio { width: 100%; }
+
+    .download-btn {
+      display: block;
+      margin-top: 12px;
+      padding: 11px;
+      text-align: center;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #ff0000, #900);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>LIL PEEP</h1>
+  <p>HELLBOY • 2016</p>
+</header>
+
+<div class="songs-container">
+
+<!-- 01 -->
+<div class="song-card" data-bg="radial-gradient(circle,#330000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">01 — Drive By (ft. Xavier Wulf)</div>
+  <audio controls src="Lil-Peep-drive-by-(Ft-Xavier-Wulf)-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-drive-by-(Ft-Xavier-Wulf)-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 02 -->
+<div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">02 — Fucked Up</div>
+  <audio controls src="Lil-Peep-fucked-up-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-fucked-up-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 03 -->
+<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">03 — Girls (ft. Horse Head)</div>
+  <audio controls src="Lil-Peep-girls-Ft-Horsehead-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-girls-Ft-Horsehead-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 04 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">04 — Gucci Mane</div>
+  <audio controls src="Lil-Peep-gucci-mane-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-gucci-mane-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 05 -->
+<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">05 — Hellboy</div>
+  <audio controls src="Lil-Peep-hellboy-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-hellboy-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 06 -->
+<div class="song-card" data-bg="radial-gradient(circle,#880000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">06 — Interlude</div>
+  <audio controls src="Lil-Peep-interlude-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-interlude-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 07 -->
+<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">07 — OMFG</div>
+  <audio controls src="Lil-Peep-OMFG-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-OMFG-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 08 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">08 — Walk Away As The Door Slams (ft. Lil Tracy)</div>
+  <audio controls src="Lil-Peep-walk-away-as-the-door-slams-(Ft-Lil-Tracy)-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-walk-away-as-the-door-slams-(Ft-Lil-Tracy)-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 09 -->
+<div class="song-card" data-bg="radial-gradient(circle,#550000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">09 — Move On, Be Strong</div>
+  <audio controls src="Lil-Peep-move-on,-be-strong-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-move-on,-be-strong-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 10 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">10 — Nose Ring</div>
+  <audio controls src="Lil-Peep-nose-ring-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-nose-ring-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 11 -->
+<div class="song-card" data-bg="radial-gradient(circle,#770000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">11 — Red Drop Shawty (ft. KirbLaGoop)</div>
+  <audio controls src="Lil-Peep-red-drop-shawty-(Ft-KirbLaGoop)-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-red-drop-shawty-(Ft-KirbLaGoop)-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 12 -->
+<div class="song-card" data-bg="radial-gradient(circle,#880000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">12 — The Last Thing I Wanna Do</div>
+  <audio controls src="Lil-Peep-the-last-thing-i-wanna-do-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-the-last-thing-i-wanna-do-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 13 -->
+<div class="song-card" data-bg="radial-gradient(circle,#990000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">13 — The Song They Played (When I Crashed Into The Wall)</div>
+  <audio controls src="Lil-Peep-the-song-they-played-(when-i-crashed-into-the-wall).mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-the-song-they-played-(when-i-crashed-into-the-wall).mp3" download>⬇ Download</a>
+</div>
+
+<!-- 14 -->
+<div class="song-card" data-bg="radial-gradient(circle,#660000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">14 — We Think Too Much</div>
+  <audio controls src="Lil-Peep-we-think-too-much-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-we-think-too-much-320.mp3" download>⬇ Download</a>
+</div>
+
+<!-- 15 -->
+<div class="song-card" data-bg="radial-gradient(circle,#440000,#000)">
+  <div class="cover-wrapper">
+    <img class="song-cover" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg">
+  </div>
+  <div class="song-title">15 — Worlds Away</div>
+  <audio controls src="Lil-Peep-worlds-away-320.mp3"></audio>
+  <a class="download-btn" href="Lil-Peep-worlds-away-320.mp3" download>⬇ Download</a>
+</div>
+
+
+<script>
+  const audios = document.querySelectorAll('audio');
+  const cards = document.querySelectorAll('.song-card');
+
+  audios.forEach(audio => {
+    audio.addEventListener('play', () => {
+      audios.forEach(a => {
+        if (a !== audio) {
+          a.pause();
+          a.parentElement.classList.remove('playing');
+        }
+      });
+      const card = audio.parentElement;
+      cards.forEach(c => c.classList.remove('playing'));
+      card.classList.add('playing');
+      document.body.style.background = card.dataset-bg;
+    });
+  });
+</script>
+
+</body>
+</html>
