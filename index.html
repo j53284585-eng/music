@@ -49,17 +49,40 @@ h1 {
   box-shadow: 0 0 15px rgba(255,0,0,0.4);
 }
 
-.artist-section {
-  margin-bottom: 70px;
+/* ===== Artist Header ===== */
+.artist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }
 
 .artist-title {
   font-size: 34px;
-  margin-bottom: 25px;
   color: #ff4d4d;
   border-left: 4px solid #ff0000;
   padding-left: 15px;
   text-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+.about-btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #ff0000;
+  color: #ff4d4d;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background: #ff0000;
+  color: #000;
+}
+
+.artist-section {
+  margin-bottom: 70px;
 }
 
 .album-container {
@@ -94,8 +117,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-.album-btn,
-.download-btn {
+.album-btn {
   display: block;
   padding: 10px;
   border-radius: 10px;
@@ -104,9 +126,6 @@ h1 {
   margin-bottom: 8px;
   transition: 0.3s;
   text-align: center;
-}
-
-.album-btn {
   background: linear-gradient(90deg, #ff0000, #b30000);
   color: #fff;
 }
@@ -116,20 +135,10 @@ h1 {
   color: #000;
 }
 
-.download-btn {
-  border: 1px solid #ff0000;
-  color: #ff0000;
-  font-size: 14px;
-}
-
-.download-btn:hover {
-  background: #ff0000;
-  color: #000;
-}
-
 @media (max-width: 600px) {
   body { padding: 25px; }
   .album-container { justify-content: center; }
+  .artist-header { flex-direction: column; gap: 15px; align-items: flex-start; }
 }
 </style>
 </head>
@@ -144,7 +153,10 @@ h1 {
 
 <!-- ================= Nirvana ================= -->
 <section class="artist-section">
-  <div class="artist-title">NIRVANA</div>
+  <div class="artist-header">
+    <div class="artist-title">NIRVANA</div>
+    <a href="about-nirvana.html" class="about-btn">About Band</a>
+  </div>
 
   <div class="album-container">
     <article class="album-card" data-search="nirvana bleach 1989">
@@ -161,10 +173,12 @@ h1 {
   </div>
 </section>
 
-
 <!-- ================= Korn ================= -->
 <section class="artist-section">
-  <div class="artist-title">KORN</div>
+  <div class="artist-header">
+    <div class="artist-title">KORN</div>
+    <a href="about-korn.html" class="about-btn">About Band</a>
+  </div>
 
   <div class="album-container">
     <article class="album-card" data-search="korn untitled 2007">
@@ -174,10 +188,13 @@ h1 {
     </article>
   </div>
 </section>
-  
+
 <!-- ================= Lil Peep ================= -->
 <section class="artist-section">
-  <div class="artist-title">LIL PEEP</div>
+  <div class="artist-header">
+    <div class="artist-title">LIL PEEP</div>
+    <a href="about-lilpeep.html" class="about-btn">About Artist</a>
+  </div>
 
   <div class="album-container">
     <article class="album-card" data-search="lil peep crybaby 2016">
@@ -185,61 +202,24 @@ h1 {
       <div class="album-title">Crybaby (2016)</div>
       <a href="lilbby.html" class="album-btn">🎧 Open Album</a>
     </article>
-    
-    <article class="album-card" data-search="lil peep hellboy 2016 hell boy">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg" class="album-img">
-  <div class="album-title">Hellboy (2016)</div>
-  <a href="hellboy.html" class="album-btn">🎧 Open Album</a>
-</article>
 
-    <article class="album-card" data-search="lil peep castles ii castles 2 lil tracy">
-  <img src="https://images.genius.com/516ba2f8e6fc83f480b601623e928506.1000x1000x1.png" class="album-img">
-  <div class="album-title">CÅSTLES II (2017)</div>
-  <a href="castles2.html" class="album-btn">🎧 Open Album</a>
-</article>
+    <article class="album-card" data-search="lil peep hellboy 2016">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg" class="album-img">
+      <div class="album-title">Hellboy (2016)</div>
+      <a href="hellboy.html" class="album-btn">🎧 Open Album</a>
+    </article>
 
-    <article class="album-card" data-search="lil peep everybody's everything 2019">
-  <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png" class="album-img">
-  <div class="album-title">Everybody’s Everything (2019)</div>
-  <a href="EverybodysEverything.html" class="album-btn">🎧 Open Album</a>
-</article>
+    <article class="album-card" data-search="lil peep castles ii 2017">
+      <img src="https://images.genius.com/516ba2f8e6fc83f480b601623e928506.1000x1000x1.png" class="album-img">
+      <div class="album-title">CÅSTLES II (2017)</div>
+      <a href="castles2.html" class="album-btn">🎧 Open Album</a>
+    </article>
 
-    <article class="album-card" data-search="lil peep bexey romeos regrets 2015">
-  <img src="https://i1.sndcdn.com/artworks-000136169395-xvazqt-t500x500.jpg" class="album-img">
-  <div class="album-title">Romeo’s Regrets (2015)</div>
-  <a href="romeos-regrets.html" class="album-btn">🎧 Open Album</a>
-</article>
-
-    <article class="album-card" data-search="lil peep come over when youre sober cowys 1 2017">
-  <img src="https://i.scdn.co/image/ab67616d0000b27322278aa84691381f3015d534" class="album-img">
-  <div class="album-title">Come Over When You’re Sober, Pt. 1 (2017)</div>
-  <a href="cowys1.html" class="album-btn">🎧 Open Album</a>
-</article>
-
-    <article class="album-card" data-search="lil peep ilovemakonnen diamonds 2023">
-  <img src="https://upload.wikimedia.org/wikipedia/en/6/6c/Diamonds_%28Lil_Peep_and_iLoveMakonnen_album%29_cover_art.jpg" class="album-img">
-  <div class="album-title">Diamonds (2023)</div>
-  <a href="Diamonds.html" class="album-btn">🎧 Open Album</a>
-</article>
-
-    <article class="album-card" data-search="lil peep lil tracy castles 2016">
-  <img src="https://media.pitchfork.com/photos/60e47733331c9bf60f4b0c08/master/pass/100000x100000-999.jpeg" class="album-img">
-  <div class="album-title">Castles (2016)</div>
-  <a href="Castles.html" class="album-btn">🎧 Open Album</a>
-</article>
-
-    <article class="album-card" data-search="lil peep meeting by chance changes 2016">
-  <img src="https://i.scdn.co/image/ab67616d0000b273f8fff0b09b8bedf0247cf9aa" class="album-img">
-  <div class="album-title">Changes (2016)</div>
-  <a href="Changes.html" class="album-btn">🎧 Open Album</a>
-</article>
-
-    <article class="album-card" data-search="lil peep come over when youre sober pt 2 2018">
-  <img src="https://upload.wikimedia.org/wikipedia/en/2/27/Come_Over_When_You%27re_Sober_Part_2.jpg" class="album-img">
-  <div class="album-title">Come Over When You're Sober, Pt. 2 (2018)</div>
-  <a href="comys.html" class="album-btn">🎧 Open Album</a>
-</article>
-
+    <article class="album-card" data-search="lil peep everybodys everything 2019">
+      <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png" class="album-img">
+      <div class="album-title">Everybody’s Everything (2019)</div>
+      <a href="EverybodysEverything.html" class="album-btn">🎧 Open Album</a>
+    </article>
   </div>
 </section>
 
@@ -303,6 +283,10 @@ function runSearch() {
   });
 }
 </script>
+
+</body>
+</html>
+
 
 
 
