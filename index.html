@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Music</title>
 
 <style>
@@ -49,7 +48,9 @@ h1 {
   box-shadow: 0 0 15px rgba(255,0,0,0.4);
 }
 
-/* ===== Artist Header ===== */
+.artist-section { margin-bottom: 70px; }
+
+/* 🔴 هدر آرتیست + دکمه */
 .artist-header {
   display: flex;
   align-items: center;
@@ -68,21 +69,17 @@ h1 {
 .about-btn {
   padding: 8px 14px;
   border-radius: 10px;
-  background: transparent;
   border: 1px solid #ff0000;
   color: #ff4d4d;
   text-decoration: none;
-  font-size: 13px;
-  transition: 0.3s ease;
+  font-size: 14px;
+  transition: 0.3s;
+  box-shadow: 0 0 12px rgba(255,0,0,0.4);
 }
 
 .about-btn:hover {
   background: #ff0000;
   color: #000;
-}
-
-.artist-section {
-  margin-bottom: 70px;
 }
 
 .album-container {
@@ -138,7 +135,6 @@ h1 {
 @media (max-width: 600px) {
   body { padding: 25px; }
   .album-container { justify-content: center; }
-  .artist-header { flex-direction: column; gap: 15px; align-items: flex-start; }
 }
 </style>
 </head>
@@ -155,7 +151,7 @@ h1 {
 <section class="artist-section">
   <div class="artist-header">
     <div class="artist-title">NIRVANA</div>
-    <a href="about-nirvana.html" class="about-btn">About Band</a>
+    <a href="nirvana-about.html" class="about-btn">About Band</a>
   </div>
 
   <div class="album-container">
@@ -177,7 +173,7 @@ h1 {
 <section class="artist-section">
   <div class="artist-header">
     <div class="artist-title">KORN</div>
-    <a href="about-korn.html" class="about-btn">About Band</a>
+    <a href="korn-about.html" class="about-btn">About Band</a>
   </div>
 
   <div class="album-container">
@@ -193,33 +189,81 @@ h1 {
 <section class="artist-section">
   <div class="artist-header">
     <div class="artist-title">LIL PEEP</div>
-    <a href="about-lilpeep.html" class="about-btn">About Artist</a>
+    <a href="lilpeep-about.html" class="about-btn">About Singer</a>
+  </div>
+
+ <!-- ================= Lil Peep ================= -->
+<section class="artist-section">
+  <div class="artist-header">
+    <div class="artist-title">LIL PEEP</div>
+    <a href="lilpeep-about.html" class="about-btn">About Singer</a>
   </div>
 
   <div class="album-container">
+
     <article class="album-card" data-search="lil peep crybaby 2016">
       <img src="https://upload.wikimedia.org/wikipedia/en/e/ef/Lil_Peep_2016_Mixtape_Crybaby_Cover.jpg" class="album-img">
       <div class="album-title">Crybaby (2016)</div>
       <a href="lilbby.html" class="album-btn">🎧 Open Album</a>
     </article>
 
-    <article class="album-card" data-search="lil peep hellboy 2016">
+    <article class="album-card" data-search="lil peep hellboy 2016 hell boy">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/LilPeep-Hellboy_%28cropped%29.jpg" class="album-img">
       <div class="album-title">Hellboy (2016)</div>
       <a href="hellboy.html" class="album-btn">🎧 Open Album</a>
     </article>
 
-    <article class="album-card" data-search="lil peep castles ii 2017">
+    <article class="album-card" data-search="lil peep castles ii castles 2 lil tracy">
       <img src="https://images.genius.com/516ba2f8e6fc83f480b601623e928506.1000x1000x1.png" class="album-img">
       <div class="album-title">CÅSTLES II (2017)</div>
       <a href="castles2.html" class="album-btn">🎧 Open Album</a>
     </article>
 
-    <article class="album-card" data-search="lil peep everybodys everything 2019">
+    <article class="album-card" data-search="lil peep everybody's everything 2019">
       <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Lil_Peep_-_Everybody%27s_Everything.png" class="album-img">
       <div class="album-title">Everybody’s Everything (2019)</div>
       <a href="EverybodysEverything.html" class="album-btn">🎧 Open Album</a>
     </article>
+
+    <article class="album-card" data-search="lil peep bexey romeos regrets 2015">
+      <img src="https://i1.sndcdn.com/artworks-000136169395-xvazqt-t500x500.jpg" class="album-img">
+      <div class="album-title">Romeo’s Regrets (2015)</div>
+      <a href="romeos-regrets.html" class="album-btn">🎧 Open Album</a>
+    </article>
+
+    <article class="album-card" data-search="lil peep come over when youre sober cowys 1 2017">
+      <img src="https://i.scdn.co/image/ab67616d0000b27322278aa84691381f3015d534" class="album-img">
+      <div class="album-title">Come Over When You’re Sober, Pt. 1 (2017)</div>
+      <a href="cowys1.html" class="album-btn">🎧 Open Album</a>
+    </article>
+
+    <article class="album-card" data-search="lil peep ilovemakonnen diamonds 2023">
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/6c/Diamonds_%28Lil_Peep_and_iLoveMakonnen_album%29_cover_art.jpg" class="album-img">
+      <div class="album-title">Diamonds (2023)</div>
+      <a href="Diamonds.html" class="album-btn">🎧 Open Album</a>
+    </article>
+
+    <article class="album-card" data-search="lil peep lil tracy castles 2016">
+      <img src="https://media.pitchfork.com/photos/60e47733331c9bf60f4b0c08/master/pass/100000x100000-999.jpeg" class="album-img">
+      <div class="album-title">Castles (2016)</div>
+      <a href="Castles.html" class="album-btn">🎧 Open Album</a>
+    </article>
+
+    <article class="album-card" data-search="lil peep meeting by chance changes 2016">
+      <img src="https://i.scdn.co/image/ab67616d0000b273f8fff0b09b8bedf0247cf9aa" class="album-img">
+      <div class="album-title">Changes (2016)</div>
+      <a href="Changes.html" class="album-btn">🎧 Open Album</a>
+    </article>
+
+    <article class="album-card" data-search="lil peep come over when youre sober pt 2 2018">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/27/Come_Over_When_You%27re_Sober_Part_2.jpg" class="album-img">
+      <div class="album-title">Come Over When You're Sober, Pt. 2 (2018)</div>
+      <a href="comys.html" class="album-btn">🎧 Open Album</a>
+    </article>
+
+  </div>
+</section>
+
   </div>
 </section>
 
@@ -231,10 +275,8 @@ function levenshtein(a, b) {
   const al = a.length, bl = b.length;
   if (!al) return bl;
   if (!bl) return al;
-
   const matrix = Array.from({ length: bl + 1 }, (_, i) => [i]);
   for (let j = 0; j <= al; j++) matrix[0][j] = j;
-
   for (let i = 1; i <= bl; i++) {
     for (let j = 1; j <= al; j++) {
       matrix[i][j] =
@@ -263,22 +305,15 @@ searchInput.addEventListener('input', () => {
 
 function runSearch() {
   const value = searchInput.value.toLowerCase().trim();
-
   sections.forEach(section => {
     const cards = section.querySelectorAll('.album-card');
     let sectionHasResult = false;
-
     cards.forEach(card => {
       const text = card.dataset.search.toLowerCase();
-      const match =
-        !value ||
-        text.includes(value) ||
-        similarity(value, text) > 0.4;
-
+      const match = !value || text.includes(value) || similarity(value, text) > 0.4;
       card.style.display = match ? '' : 'none';
       if (match) sectionHasResult = true;
     });
-
     section.style.display = sectionHasResult ? '' : 'none';
   });
 }
@@ -286,7 +321,6 @@ function runSearch() {
 
 </body>
 </html>
-
 
 
 
